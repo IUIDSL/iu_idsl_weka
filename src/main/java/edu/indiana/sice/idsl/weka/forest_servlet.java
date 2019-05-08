@@ -276,7 +276,7 @@ public class forest_servlet extends HttpServlet
       errors.add("server: "+CONTEXT.getServerInfo()+" [API:"+CONTEXT.getMajorVersion()+"."+CONTEXT.getMinorVersion()+"]");
       errors.add("ServletContextName: "+CONTEXT.getServletContextName());
       errors.add("Weka ver: "+weka.core.Version.VERSION);
-      errors.add("JChem ver: "+chemaxon.jchem.version.VersionInfo.getVersion());
+      errors.add("JChem ver: "+com.chemaxon.version.VersionInfo.getVersion());
     }
 
     fileT=mrequest.getFile("infile_train");
