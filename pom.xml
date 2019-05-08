@@ -6,9 +6,9 @@
 
   <groupId>iuidsl</groupId>
   <artifactId>iu_idsl_weka</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-
+  <packaging>war</packaging>
   <name>IU_IDSL_WEKA</name>
+  <version>0.0.1-SNAPSHOT</version>
   <description>A simple iu_idsl_weka.</description>
   <url>http://www.indiana.edu</url>
 
@@ -77,7 +77,20 @@
 
   <build>
     <plugins>
-      <!-- https://maven.apache.org/plugins/maven-war-plugin/ -->
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>make-a-jar</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
@@ -100,9 +113,27 @@
           </webResources>
         </configuration>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>Add-2-local-repository</id>
+            <phase>package</phase>
+            <configuration>
+              <packaging>jar</packaging>
+              <file>${project.build.directory}\${artifactId}-${version}.jar</file>
+            </configuration>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
 
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement>
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
