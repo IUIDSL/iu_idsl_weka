@@ -19,13 +19,8 @@
   <dependencies>
 
     <dependency>
-      <groupId>unmbiocomputing</groupId>
-      <artifactId>unm_biocomp_util</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>unmbiocomputing</groupId>
-      <artifactId>unm_biocomp_http</artifactId>
+      <groupId>iuidsl</groupId>
+      <artifactId>iu_idsl_util</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
 

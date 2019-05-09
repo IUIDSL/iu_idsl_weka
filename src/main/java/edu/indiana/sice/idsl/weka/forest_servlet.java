@@ -22,7 +22,7 @@ import weka.core.converters.*; //ArffLoader, CSVLoader, ArffSaver
 import weka.classifiers.trees.RandomForest;
 import weka.classifiers.Evaluation;
 
-import edu.unm.health.biocomp.http.*;
+import edu.indiana.sice.idsl.util.http.*;
 
 /// To do:
 ///	[ ] Input formats include CSV (delim control) with additional (explanatory) variables
