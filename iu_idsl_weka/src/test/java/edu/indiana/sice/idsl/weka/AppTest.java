@@ -1,4 +1,4 @@
-package iuidsl;
+package edu.indiana.sice.idsl.weka;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
